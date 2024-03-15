@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+//! TAREA NRO 6
+
+
+
+while (true) {
+
+let primerNumero = Number(prompt("Intruduce el primer numero"))
+let SegundoNumero = Number(prompt("Intruduce el segundo numero"))
+let operacion = prompt("Operacion que deseas realizar? (+, -, *, /)");
+let resultado;
+
+
+
+    primerNumero = Number(primerNumero);
+    SegundoNumero = Number(SegundoNumero);
+
+if(primerNumero === "S" || SegundoNumero === "S" || operacion === "S"){
+    break;
+}
+
+if(!Number.isNaN(primerNumero) && !Number.isNaN(SegundoNumero) && !Number.isNaN(operacion)){
+    switch(operacion){
+        case "+":
+            resultado = primerNumero + SegundoNumero;
+            console.log(resultado);
+            break;
+        case "-":
+            resultado = primerNumero - SegundoNumero;
+            console.log(resultado);
+            break;
+        case "*":
+            resultado = primerNumero * SegundoNumero;
+            console.log(resultado);
+            break;
+        case "/":
+            resultado = primerNumero / SegundoNumero;
+            console.log(resultado);
+            break;
+            default:
+                resultado = "El operador que selecciono no existe"
+
+    }
+}else {
+    resultado = "El valor que introducio no es un numero"
+}
+alert(resultado)
+}
+
+    </script>
+    
+</body>
+</html>

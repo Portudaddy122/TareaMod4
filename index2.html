@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//!TAREA NRO 4
+
+let peliculas = [];
+while(true){
+
+
+let nombre = prompt("Escriba el nombre de una pelicula");
+let clasificacion = prompt("Escriba la clasificacion de la pelicula");
+
+
+    if (nombre === null || clasificacion === null){
+        break
+    }else{
+        peliculas.push({
+            nombre: nombre,
+            clasificacion: Number(clasificacion)
+        });
+    }
+}
+    console.log("Peliculas con puntaje menor a 7");
+    for(pelicula of peliculas){
+        if (pelicula.clasificacion < 7){
+            console.log(`${pelicula.nombre} (${pelicula.clasificacion})`);
+        }
+    }
+
+    console.log("Peliculas con puntaje mayor a 7");
+    for(pelicula of peliculas){
+        if (pelicula.clasificacion >= 7){
+            console.log(`${pelicula.nombre} (${pelicula.clasificacion})`);
+            break;
+        }
+    }
+
+
+    </script>
+    
+</body>
+</html>
